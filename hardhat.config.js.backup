@@ -34,9 +34,7 @@ module.exports = {
     enabled: true,
     showMethodSig: true,
     maxMethodDiff: 1000,
-    currency: 'USD',
-    gasPrice: 80000000000000,
-    gasLimit: 100000000000
+    currency: 'USD'
   },
   contractSizer: {
     alphaSort: true,
