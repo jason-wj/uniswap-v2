@@ -9,4 +9,6 @@
 
 
 ## 发布
+```shell
 npx hardhat --network goerli run scripts/deploy.js
+```

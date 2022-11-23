@@ -23,13 +23,13 @@ async function main() {
     console.log("Account balance:", (await deployer.getBalance()).toString());
 
     //solidity version：0.4.18
-    await weth9();
+    // await weth9();
 
     //solidity version：0.5.16
-    //await uniswapv2Factory();
+    // await uniswapv2Factory();
 
     //solidity version：0.6.6
-    //await uniswapV2Router02();
+    await uniswapV2Router02();
 
     // We also save the contract's artifacts and address in the frontend directory
     // saveFrontendFiles(token);
@@ -44,15 +44,6 @@ async function weth9(){
     console.log("WETH9 address:", weth9.address);
 }
 
-//solidity version：0.6.6
-async function uniswapV2Router02(){
-    const UniswapV2Router02 = await ethers.getContractFactory("UniswapV2Router02");
-    const uniswapV2Router02 = await UniswapV2Router02.deploy('0x08b99E6B892da793b3dA07db14D83c86337d5B1c','0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2');
-    await uniswapV2Router02.deployed();
-
-    console.log("UniswapV2Router02 address:", uniswapV2Router02.address);
-}
-
 //solidity version：0.5.16
 async function uniswapv2Factory(){
     const UniswapV2Factory = await ethers.getContractFactory("UniswapV2Factory");
@@ -60,6 +51,15 @@ async function uniswapv2Factory(){
     await uniswapV2Factory.deployed();
 
     console.log("UniswapV2Factory address:", uniswapV2Factory.address);
+}
+
+//solidity version：0.6.6
+async function uniswapV2Router02(){
+    const UniswapV2Router02 = await ethers.getContractFactory("UniswapV2Router02");
+    const uniswapV2Router02 = await UniswapV2Router02.deploy('0x08b99E6B892da793b3dA07db14D83c86337d5B1c','0xFe33eC9960E430608030e92860264B486Ae99Ef2');
+    await uniswapV2Router02.deployed();
+
+    console.log("UniswapV2Router02 address:", uniswapV2Router02.address);
 }
 
 function saveFrontendFiles(token) {
