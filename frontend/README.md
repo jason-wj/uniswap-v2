@@ -1,38 +1,65 @@
-# Sample React Dapp
+# Uniswap Interface
 
-This directory has a sample Dapp to interact with your contracts, built using
-React.
+[![Tests](https://github.com/Uniswap/uniswap-interface/workflows/Tests/badge.svg)](https://github.com/Uniswap/uniswap-interface/actions?query=workflow%3ATests)
+[![Styled With Prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://prettier.io/)
 
-## Running the Dapp
+An open source interface for Uniswap -- a protocol for decentralized exchange of Ethereum tokens.
 
-This project uses [`create-react-app`](https://create-react-app.dev/), so most
-configuration files are handled by it.
+- Website: [uniswap.org](https://uniswap.org/)
+- Interface: [app.uniswap.org](https://app.uniswap.org)
+- Docs: [uniswap.org/docs/](https://uniswap.org/docs/)
+- Twitter: [@UniswapProtocol](https://twitter.com/UniswapProtocol)
+- Reddit: [/r/Uniswap](https://www.reddit.com/r/Uniswap/)
+- Email: [contact@uniswap.org](mailto:contact@uniswap.org)
+- Discord: [Uniswap](https://discord.gg/Y7TF6QA)
+- Whitepaper: [Link](https://hackmd.io/C-DvwDSfSxuh-Gd4WKE_ig)
 
-To run it, you just need to execute `npm start` in a terminal, and open
-[http://localhost:3000](http://localhost:3000).
+## Accessing the Uniswap Interface
 
-To learn more about what `create-react-app` offers, you can read
-[its documentation](https://create-react-app.dev/docs/getting-started).
+To access the Uniswap Interface, use an IPFS gateway link from the
+[latest release](https://github.com/Uniswap/uniswap-interface/releases/latest), 
+or visit [app.uniswap.org](https://app.uniswap.org).
 
-## Architecture of the Dapp
+## Listing a token
 
-This Dapp consists of multiple React Components, which you can find in
-`src/components`.
+Please see the
+[@uniswap/default-token-list](https://github.com/uniswap/default-token-list) 
+repository.
 
-Most of them are presentational components, have no logic, and just render HTML.
+## Development
 
-The core functionality is implemented in `src/components/Dapp.js`, which has
-examples of how to connect to the user's wallet, initialize your Ethereum
-connection and contracts, read from the contract's state, and send transactions.
+### Install Dependencies
 
-You can use the `Dapp` component as a starting point for your project. It has
-comments explaining each part of its code, and indicating what's specific to
-this project, and what can be reused.
+```bash
+yarn
+```
 
-## Getting help and news
+### Run
 
-If you need help with this project or with Hardhat in general, please read [this guide](https://hardhat.org/hardhat-runner/docs/guides/getting-help) to learn where and how to get it.
+```bash
+yarn start
+```
 
-[Follow us on Twitter](https://twitter.com/HardhatHQ) to get the latest news about Hardhat, and don't forget to star [our GitHub repository](https://github.com/NomicFoundation/hardhat)!
+### Configuring the environment (optional)
 
-**Happy _building_!**
+To have the interface default to a different network when a wallet is not connected:
+
+1. Make a copy of `.env` named `.env.local`
+2. Change `REACT_APP_NETWORK_ID` to `"{YOUR_NETWORK_ID}"`
+3. Change `REACT_APP_NETWORK_URL` to e.g. `"https://{YOUR_NETWORK_ID}.infura.io/v3/{YOUR_INFURA_KEY}"` 
+
+Note that the interface only works on testnets where both 
+[Uniswap V2](https://uniswap.org/docs/v2/smart-contracts/factory/) and 
+[multicall](https://github.com/makerdao/multicall) are deployed.
+The interface will not work on other networks.
+
+## Contributions
+
+**Please open all pull requests against the `master` branch.** 
+CI checks will run against all PRs.
+
+## Accessing Uniswap Interface V1
+
+The Uniswap Interface supports swapping against, and migrating or removing liquidity from Uniswap V1. However,
+if you would like to use Uniswap V1, the Uniswap V1 interface for mainnet and testnets is accessible via IPFS gateways 
+linked from the [v1.0.0 release](https://github.com/Uniswap/uniswap-interface/releases/tag/v1.0.0).
