@@ -1,6 +1,5 @@
 node_modules
 coverage
-build
 .idea
 .vscode
 .DS_Store
