@@ -21,4 +21,5 @@ export const DEFAULT_TOKEN_LIST_URL = 'tokens.uniswap.eth'
 
 export const DEFAULT_LIST_OF_LISTS: string[] = [
   DEFAULT_TOKEN_LIST_URL,
+    'https://gist.githubusercontent.com/jason-wj/53780a04750e640b6e5171090b7707ac/raw/d77990cd7a69f7bf559dda874d9e401b747fa6a8/token.json'
 ]
