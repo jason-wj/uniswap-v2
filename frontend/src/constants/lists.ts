@@ -1,7 +1,7 @@
 // the Uniswap Default token list lives here
 export const DEFAULT_TOKEN_LIST_URL = 'tokens.uniswap.eth'
 
-export const DEFAULT_LIST_OF_LISTS: string[] = [
+/*export const DEFAULT_LIST_OF_LISTS: string[] = [
   DEFAULT_TOKEN_LIST_URL,
   't2crtokens.eth', // kleros
   'tokens.1inch.eth', // 1inch
@@ -18,11 +18,9 @@ export const DEFAULT_LIST_OF_LISTS: string[] = [
   'https://defiprime.com/defiprime.tokenlist.json',
   'https://umaproject.org/uma.tokenlist.json',
   'https://solidity.4everland.store/tokens.json'
-]
+]*/
 
-/*
 export const DEFAULT_LIST_OF_LISTS: string[] = [
   DEFAULT_TOKEN_LIST_URL,
   'https://solidity.4everland.store/tokens.json'
 ]
-*/
